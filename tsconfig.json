@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+        "module": "CommonJS",
+        "noImplicitAny": true,
+        "removeComments": false,
+        "preserveConstEnums": true,
+        "sourceMap": true,
+        "outDir": "./build",
+        "rootDir": "./src",
+        "noEmitOnError": true,
+        "strict": true,
+        "lib": ["ES2020"],
+        "declaration": true
+    },
+
+    "include": [
+        "src/**/*"
+    ],
+
+    "exclude": [
+        "nodemodules",
+        "build"
+    ]
+}

@@ -1,0 +1,36 @@
+{
+  "name": "@dr-fabian/riot_api",
+  "version": "1.0.0",
+  "description": "A Javascript library used to make the use of Riot's API much easier.",
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dr-Fabian/Riot_API.git"
+  },
+  "keywords": [
+    "league of legends",
+    "riot",
+    "api",
+    "lol"
+  ],
+  "author": "Fabian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dr-Fabian/Riot_API/issues"
+  },
+  "homepage": "https://github.com/Dr-Fabian/Riot_API#readme",
+  "dependencies": {
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.13",
+    "tsc": "^1.20150623.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
