@@ -21,7 +21,7 @@ const Riot = require('@dr-fabian/riot_api');
 const RiotAPI = new Riot(<riot api token>);
 
 //server has to be one of these (euw1 | eun1 | br1 | jp1 | kr | la1 | la2 | na1 | oc1 | ru | tr1)
-await RiotAPI.leagueOfLegends.getPlayerAsync(server, username); // Returns summoner account info
+await RiotAPI.leagueOfLegends.getPlayer(server, username); // Returns summoner account info
 ```
 ***
 ### Get Summoner's last matches Asynchronously
@@ -31,12 +31,28 @@ const Riot = require('@dr-fabian/riot_api');
 const RiotAPI = new Riot(<riot api token>);
 
 //server has to be one of these (euw1 | eun1 | br1 | jp1 | kr | la1 | la2 | na1 | oc1 | ru | tr1)
-await RiotAPI.leagueOfLegends.getPlayerLastMatchesAsync(
+await RiotAPI.leagueOfLegends.getPlayerLastMatches(
     server,
     accountId,
     beginIndex,
     endIndex
-); // Returns summoner's last matches, the request begins at index 0 and ends at index 0 per default.
+); // Returns summoner's last matches, the request begins at index 0 and ends at index 1 per default.
+```
+
+### Get Match info
+
+```javascript
+const Riot = require('@dr-fabian/riot_api');
+const RiotAPI = new Riot(<riot api token>);
+
+//server has to be one of these (euw1 | eun1 | br1 | jp1 | kr | la1 | la2 | na1 | oc1 | ru | tr1)
+// Returns summoner's last matches, the request begins at index 0 and ends at index 1 per default.
+const matches = await RiotAPI.leagueOfLegends.getPlayerLastMatches(...args);
+RiotAPI.leagueOfLegends.getMatchInfo(
+    server,
+    matches[0].gameId
+); // Returns relative info to the match.
+
 ```
 
 # Informations
