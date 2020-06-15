@@ -18,17 +18,17 @@ yarn add @dr-fabian/riot_api
 ### Get Summoner Asynchronously
 ```javascript
 const Riot = require('@dr-fabian/riot_api');
-const RiotAPI = new Riot(<riot api token>);
+const RiotAPI = new Riot("riot api token");
 
 //server has to be one of these (euw1 | eun1 | br1 | jp1 | kr | la1 | la2 | na1 | oc1 | ru | tr1)
 await RiotAPI.leagueOfLegends.getPlayer(server, username); // Returns summoner account info
 ```
 ***
 ### Get Summoner's last matches Asynchronously
-
+;
 ```javascript
 const Riot = require('@dr-fabian/riot_api');
-const RiotAPI = new Riot(<riot api token>);
+const RiotAPI = new Riot("riot api token");
 
 //server has to be one of these (euw1 | eun1 | br1 | jp1 | kr | la1 | la2 | na1 | oc1 | ru | tr1)
 await RiotAPI.leagueOfLegends.getPlayerLastMatches(
@@ -43,7 +43,7 @@ await RiotAPI.leagueOfLegends.getPlayerLastMatches(
 
 ```javascript
 const Riot = require('@dr-fabian/riot_api');
-const RiotAPI = new Riot(<riot api token>);
+const RiotAPI = new Riot("riot api token");
 
 //server has to be one of these (euw1 | eun1 | br1 | jp1 | kr | la1 | la2 | na1 | oc1 | ru | tr1)
 // Returns summoner's last matches, the request begins at index 0 and ends at index 1 per default.
@@ -59,7 +59,7 @@ RiotAPI.leagueOfLegends.getMatchInfo(
 
 ```javascript
 const Riot = require('@dr-fabian/riot_api');
-const RiotAPI = new Riot(<riot api token>);
+const RiotAPI = new Riot("riot api token");
 
 const summoner = await RiotAPI.leagueOfLegends.getPlayer(...args);
 //server has to be one of these (euw1 | eun1 | br1 | jp1 | kr | la1 | la2 | na1 | oc1 | ru | tr1)
