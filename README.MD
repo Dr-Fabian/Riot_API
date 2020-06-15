@@ -15,7 +15,7 @@ yarn add @dr-fabian/riot_api
 
 ## Usage
 
-### Get Summoner Asynchronously
+### Get Summoner
 ```javascript
 const Riot = require('@dr-fabian/riot_api');
 const RiotAPI = new Riot("riot api token");
@@ -24,8 +24,8 @@ const RiotAPI = new Riot("riot api token");
 await RiotAPI.leagueOfLegends.getPlayer(server, username); // Returns summoner account info
 ```
 ***
-### Get Summoner's last matches Asynchronously
-;
+### Get Summoner's last matches
+
 ```javascript
 const Riot = require('@dr-fabian/riot_api');
 const RiotAPI = new Riot("riot api token");
