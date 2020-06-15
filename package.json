@@ -1,6 +1,6 @@
 {
   "name": "@dr-fabian/riot_api",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A Javascript library used to make the use of Riot's API much easier.",
   "main": "./build/index.js",
   "types": "./build/index.d.ts",
