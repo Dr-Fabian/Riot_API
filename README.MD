@@ -55,7 +55,7 @@ RiotAPI.leagueOfLegends.getMatchInfo(
 
 ```
 ***
-### Get Champion Castery
+### Get Champion Mastery
 
 ```javascript
 const Riot = require('@dr-fabian/riot_api');
