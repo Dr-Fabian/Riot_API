@@ -1,6 +1,7 @@
 import Summoner from "../interfaces/leagueOfLegends/Summoner.interface";
 import Matches from "../interfaces/leagueOfLegends/Matches.interface";
 import MatchStats from "../interfaces/leagueOfLegends/MatchStats.interface";
+import ChampionMastery from "../interfaces/leagueOfLegends/ChampionMastery.interface";
 
 const fetch = require('node-fetch');
 
@@ -30,7 +31,7 @@ module.exports = class {
      * @param  {string} server - Riot servers (euw1 | eun1 | br1 | jp1 | kr | la1 | la2 | na1 | oc1 | ru | tr1)
      * @param  {string} accountId - Summoner's account id
      * @param  {number=0} beginIndex - Begin index of the request (default is 0)
-     * @param  {number=0} endIndex - End index of the request (default is 1)
+     * @param  {number=1} endIndex - End index of the request (default is 1)
      * @returns Promise<Match[]>
      */
     async getPlayerLastMatches(server: string, accountId: string, beginIndex: number = 0, endIndex: number = 1): Promise<Matches> {
@@ -48,4 +49,15 @@ module.exports = class {
         result = await result.json();
         return result as MatchStats;
     };
+    
+    /**
+     * @param  {string} server - Riot servers (euw1 | eun1 | br1 | jp1 | kr | la1 | la2 | na1 | oc1 | ru | tr1)
+     * @param  {string} encryptedSummonerId - Game's account id
+     * @returns Promise<Mastery[]>
+     */
+    async getPlayerChampionsInfo(server: string, encryptedSummonerId: string): Promise<ChampionMastery>{
+        let result = await fetch(`https://${server}.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-summoner/${encryptedSummonerId}?api_key=${this.token}`);
+        result = result.json();
+        return result as ChampionMastery;
+    }
 }

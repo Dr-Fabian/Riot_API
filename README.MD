@@ -38,7 +38,7 @@ await RiotAPI.leagueOfLegends.getPlayerLastMatches(
     endIndex
 ); // Returns summoner's last matches, the request begins at index 0 and ends at index 1 per default.
 ```
-
+***
 ### Get Match info
 
 ```javascript
@@ -54,7 +54,21 @@ RiotAPI.leagueOfLegends.getMatchInfo(
 ); // Returns relative info to the match.
 
 ```
+***
+### Get Champion Castery
 
+```javascript
+const Riot = require('@dr-fabian/riot_api');
+const RiotAPI = new Riot(<riot api token>);
+
+const summoner = await RiotAPI.leagueOfLegends.getPlayer(...args);
+//server has to be one of these (euw1 | eun1 | br1 | jp1 | kr | la1 | la2 | na1 | oc1 | ru | tr1)
+RiotAPI.leagueOfLegends.getPlayerChampionsInfo(
+    server,
+    summonerEncryptedId
+); // Returns array of player's champions info.
+
+```
 # Informations
 * This library only supports League of Legends for now,but I plan on providing a support for Valorant as well in the future, when it'll be public.
 
