@@ -29,18 +29,13 @@ module.exports = class {
      * @param  {string} server - Riot servers (euw1 | eun1 | br1 | jp1 | kr | la1 | la2 | na1 | oc1 | ru | tr1)
      * @param  {string} accountId - Summoner's account id
      * @param  {number=0} beginIndex - Begin index of the request (default is 0)
-     * @param  {number=0} endIndex - End index of the request (default is 0)
+     * @param  {number=0} endIndex - End index of the request (default is 1)
      * @returns Promise<Match[]>
      */
-    async getPlayerLastMatches(server: string, accountId: string, beginIndex: number = 0, endIndex: number = 0): Promise<Matches> {
+    async getPlayerLastMatches(server: string, accountId: string, beginIndex: number = 0, endIndex: number = 1): Promise<Matches> {
         let matches = [];
-        try {
-            let result = await fetch(`https://${server}.api.riotgames.com/lol/match/v4/matchlists/by-account/${accountId}?endIndex=${endIndex}&beginIndex=${beginIndex}&api_key=${this.token}`);
-            result = await result.json();
-            matches = result;
-        } catch (error) {
-            console.error(error);
-        }
-        return matches;
+        let result = await fetch(`https://${server}.api.riotgames.com/lol/match/v4/matchlists/by-account/${accountId}?endIndex=${endIndex}&beginIndex=${beginIndex}&api_key=${this.token}`);
+        result = await result.json();
+        return result as Matches;
     }
 }
