@@ -1,8 +1,4 @@
-![NPM](https://img.shields.io/npm/l/@dr-fabian/riot_api?style=for-the-badge)   
-![npm](https://img.shields.io/npm/v/@dr-fabian/riot_api?style=for-the-badge)   
-[![GitHub issues](https://img.shields.io/github/issues/Dr-Fabian/Riot_API?style=for-the-badge)](https://github.com/Dr-Fabian/Riot_API/issues)    
-[![Help](https://img.shields.io/badge/Need%20further%20help%3F-Watch%20here!-blue?style=for-the-badge)](https://github.com/Dr-Fabian/Riot_API/tree/master/samples)   
-[![contribute](https://img.shields.io/badge/-Contribute-success?style=for-the-badge)](https://github.com/Dr-Fabian/Riot_API)
+![NPM](https://img.shields.io/npm/l/@dr-fabian/riot_api?style=for-the-badge)    ![npm](https://img.shields.io/npm/v/@dr-fabian/riot_api?style=for-the-badge)    [![GitHub issues](https://img.shields.io/github/issues/Dr-Fabian/Riot_API?style=for-the-badge)](https://github.com/Dr-Fabian/Riot_API/issues)   [![Help](https://img.shields.io/badge/Need%20further%20help%3F-Watch%20here!-blue?style=for-the-badge)](https://github.com/Dr-Fabian/Riot_API/tree/master/samples)  [![contribute](https://img.shields.io/badge/-Contribute-success?style=for-the-badge)](https://github.com/Dr-Fabian/Riot_API)
 
 # @Dr-Fabian/Riot_API
 
