@@ -1,12 +1,42 @@
 {
-  "name": "RiotAPIRewrite",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "name": "@dr-fabian/riot_api",
+  "version": "2.0.0",
+  "description": "A NodeJS library that aims to make the use of Riot's API easier.",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
   },
-  "keywords": [],
+  "scripts": {
+    "watch": "nodemon",
+    "test": "ts-node test/index.ts"
+  },
+  "keywords": [
+    "league of legends",
+    "riot",
+    "api",
+    "lol"
+  ],
   "author": "Fabian <dars.fabian@gmail.com> (https://github.com/Dr-Fabian/)",
-  "license": "ISC"
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^14.14.7",
+    "@types/node-fetch": "^2.5.7",
+    "@typescript-eslint/eslint-plugin": "^4.7.0",
+    "@typescript-eslint/parser": "^4.7.0",
+    "eslint": "^7.13.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dr-Fabian/Riot_API.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Dr-Fabian/Riot_API/issues"
+  },
+  "homepage": "https://github.com/Dr-Fabian/Riot_API#readme"
 }
